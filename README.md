@@ -9,7 +9,8 @@ To enjoy it just link to your template or to your stylesheet the `css/style.css`
 You can also use the less file available at `less/style.less`. With this file you can overide easily customize the Less variables listed below in order to define colors, sizes and more.
 
 ## Bower Usage
-
+Install and manage Toggle Switch using Bower.
+`$ bower install bootstrap`
 
 ## The Markup
 In order to enjoy the css designed, you just need an `input type=checkbox` with the class `.toggleSwitch` and just after as direct sibling a `label` element. Don't forget to link the label to you checkbox name or id.
