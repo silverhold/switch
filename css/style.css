@@ -1,0 +1,91 @@
+/**
+ * require 'globals/mixins'
+**/
+.toggleSwitch {
+  display: none;
+}
+.toggleSwitch + label {
+  display: inline-block;
+  position: relative;
+  font-weight: inherit;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  margin-right: 0;
+  margin-bottom: 0;
+  padding-left: 60px;
+  line-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.toggleSwitch + label:before,
+.toggleSwitch + label:after {
+  -webkit-transition: all 100ms ease;
+  -moz-transition: all 100ms ease;
+  -o-transition: all 100ms ease;
+  transition: all 100ms ease;
+}
+.toggleSwitch + label:before {
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  content: '';
+  border-style: solid;
+  width: 50px;
+  height: 30px;
+  border-width: 0;
+  border-color: transparent;
+  background-color: #5e5d5d;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0;
+  -moz-box-shadow: 0;
+  -ms-box-shadow: 0;
+  -o-box-shadow: 0;
+  box-shadow: 0;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+.toggleSwitch + label:after {
+  position: absolute;
+  content: '';
+  width: 26px;
+  height: 26px;
+  top: 2px;
+  left: 2px;
+  background-color: #ffffff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(51, 51, 51, 0.25);
+  -moz-box-shadow: 0 2px 5px 0 rgba(51, 51, 51, 0.25);
+  -ms-box-shadow: 0 2px 5px 0 rgba(51, 51, 51, 0.25);
+  -o-box-shadow: 0 2px 5px 0 rgba(51, 51, 51, 0.25);
+  box-shadow: 0 2px 5px 0 rgba(51, 51, 51, 0.25);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.toggleSwitch:checked + label:before,
+.toggleSwitch:checked + label:after {
+  -webkit-transition: all 100ms ease;
+  -moz-transition: all 100ms ease;
+  -o-transition: all 100ms ease;
+  transition: all 100ms ease;
+}
+.toggleSwitch:checked + label:before {
+  background-color: #e36566;
+}
+.toggleSwitch:checked + label:after {
+  left: 22px;
+}
+.toggleSwitch:disabled + label:before {
+  opacity: 0.25;
+}

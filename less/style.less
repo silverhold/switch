@@ -1,0 +1,128 @@
+  ///////////////////
+ // Toggle Switch //
+///////////////////
+
+
+
+
+ // Resources
+/////////////
+
+@import 'parameters/module';
+@import 'parameters/theme';
+
+
+
+ // Style
+/////////
+
+.toggleSwitch {
+    display: none;
+
+    + label {
+        display: inline-block;
+        position: relative;
+        font-weight: inherit;
+        cursor: pointer;
+        -webkit-touch-callout: none;
+        margin-right: @toggleSwitch-label_marginRight;
+        margin-bottom: 0;
+        padding-left: @toggleSwitch-container_width + @toggleSwitch-label_marginLeft;
+        line-height: @toggleSwitch-container_height;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        &:before,
+        &:after {
+            -webkit-transition: all @toggleSwitch_transitionDuration @toggleSwitch_transitionTiming;
+            -moz-transition: all @toggleSwitch_transitionDuration @toggleSwitch_transitionTiming;
+            -o-transition: all @toggleSwitch_transitionDuration @toggleSwitch_transitionTiming;
+            transition: all @toggleSwitch_transitionDuration @toggleSwitch_transitionTiming;
+        }
+
+        // container
+        &:before {
+            position: absolute;
+            display: inline-block;
+            left: 0;
+            content: '';
+            border-style: solid;
+            width: @toggleSwitch-container_width;
+            height: @toggleSwitch-container_height;
+            border-width: @toggleSwitch-container_borderWidth;
+            border-color: @toggleSwitch-container_borderColor;
+            background-color: @toggleSwitch-container_backgroundColor;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-box-shadow: @toggleSwitch-container_boxShadow;
+            -moz-box-shadow: @toggleSwitch-container_boxShadow;
+            -ms-box-shadow: @toggleSwitch-container_boxShadow;
+            -o-box-shadow: @toggleSwitch-container_boxShadow;
+            box-shadow: @toggleSwitch-container_boxShadow;
+            -webkit-border-radius: @toggleSwitch-container_height / 2;
+            -moz-border-radius: @toggleSwitch-container_height / 2;
+            border-radius: @toggleSwitch-container_height / 2;
+        }
+
+        // button
+        &:after {
+            position: absolute;
+            content: '';
+            width: @toggleSwitch-container_height - (@toggleSwitch-button_margin * 2);
+            height: @toggleSwitch-container_height - (@toggleSwitch-button_margin * 2);
+            top: @toggleSwitch-button_margin;
+            left: @toggleSwitch-button_margin;
+            background-color: @toggleSwitch-button-backgroundColor;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-box-shadow: @toggleSwitch-button_boxShadow;
+            -moz-box-shadow: @toggleSwitch-button_boxShadow;
+            -ms-box-shadow: @toggleSwitch-button_boxShadow;
+            -o-box-shadow: @toggleSwitch-button_boxShadow;
+            box-shadow: @toggleSwitch-button_boxShadow;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+
+        }
+    }
+
+    &:checked {
+        + label {
+            &:before,
+            &:after {
+                -webkit-transition: all @toggleSwitch_transitionDuration @toggleSwitch_transitionTiming;
+                -moz-transition: all @toggleSwitch_transitionDuration @toggleSwitch_transitionTiming;
+                -o-transition: all @toggleSwitch_transitionDuration @toggleSwitch_transitionTiming;
+                transition: all @toggleSwitch_transitionDuration @toggleSwitch_transitionTiming;
+            }
+
+            // container
+            &:before {
+                background-color: @toggleSwitch-container_backgroundColor-_checked;
+            }
+
+            // button
+            &:after {
+                left: @toggleSwitch-container_width - (@toggleSwitch-container_height - (@toggleSwitch-button_margin * 2)) - @toggleSwitch-button_margin;
+            }
+        }
+    }
+
+    &:disabled {
+        + label {
+            // container
+            &:before {
+                opacity: @toggleSwitch_opacity-_disabled;
+            }
+        }
+    }
+}
