@@ -10,7 +10,7 @@ You can also use the less file available at `less/style.less`. With this file yo
 
 ## Bower Usage
 Install and manage Toggle Switch using Bower.
-`$ bower install bootstrap`
+`$ bower install toggle-switch`
 
 ## The Markup
 In order to enjoy the css designed, you just need an `input type=checkbox` with the class `.toggleSwitch` and just after as direct sibling a `label` element. Don't forget to link the label to you checkbox name or id.
@@ -20,16 +20,16 @@ In order to enjoy the css designed, you just need an `input type=checkbox` with 
      <label for="example-1">Label</label> 
 
 ###checked
-     <input class="toggleSwitch" id="example-1" type="checkbox" checked> 
-     <label for="example-1">Label</label>
+     <input class="toggleSwitch" id="example-2" type="checkbox" checked> 
+     <label for="example-2">Label</label>
 
 ###disabled
-     <input class="toggleSwitch" id="example-1" type="checkbox" disabled> 
-     <label for="example-1">Label</label>
+     <input class="toggleSwitch" id="example-3" type="checkbox" disabled> 
+     <label for="example-3">Label</label>
 
 ###checked & disabled
-     <input class="toggleSwitch" id="example-1" type="checkbox" disabled checked> 
-     <label for="example-1">Label</label>
+     <input class="toggleSwitch" id="example-4" type="checkbox" disabled checked> 
+     <label for="example-4">Label</label>
      
 ## Less Variables
 The variables are divided in two categories, the `modules` and the `themes`. The module variables change the structure and the behave of the component in your template. The theme just change the look without size or layout consequences. Those two kinds of variables are called `parameters` and you can find them in `/less/parameters`.
