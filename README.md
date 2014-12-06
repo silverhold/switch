@@ -34,8 +34,8 @@ In order to enjoy the css designed, you just need an `input type=checkbox` with 
 ## Less Variables
 The variables are divided in two categories, the `modules` and the `themes`. The module variables change the structure and the behave of the component in your template. The theme just change the look without size or layout consequences. Those two kinds of variables are called `parameters` and you can find them in `/less/parameters`.
 
-* @toggleSwitch_transitionDuration: 100ms
-* @toggleSwitch_transitionTiming: ease
+* @toggleSwitch-container_transitionDuration: 100ms
+* @toggleSwitch-container_transitionAnimation: ease
 * @toggleSwitch-container_width: 50px
 * @toggleSwitch-container_height: 30px
 * @toggleSwitch-container_borderWidth: 0
@@ -45,8 +45,10 @@ The variables are divided in two categories, the `modules` and the `themes`. The
 * @toggleSwitch-container_boxShadow: 0
 * @toggleSwitch_opacity-_disabled: 0.25
 * @toggleSwitch-button_margin: 2px
+* @toggleSwitch-button_widthDiff-_transition: 10px
 * @toggleSwitch-button-backgroundColor: white
 * @toggleSwitch-button_boxShadow: 0 2px 5px 0 fade(#333, 25%)
+* @toggleSwitch-button_animationDuration: 500ms;
 * @toggleSwitch-label_marginLeft: 10px
 * @toggleSwitch-label_marginRight: 0
 

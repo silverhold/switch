@@ -8,7 +8,7 @@
         <link href="doc/style.css" rel="stylesheet">
     </head>
 
-    <body>
+    <body class="preload">
         <div class="container">
             <h1 class="h1">Toggle Switch</h1>
             <h2 class="small" style="margin: 0 0 30px;">designed by <a href="https://www.behance.net/clementmenant" title="Clément Menant Behance">Clément Menant</a> and <a href="https://twitter.com/earvinpepper" title="Loïc Goyet Twitter page">Loïc Goyet</a> for <a href="http://appventus.com/" title="Agence web et mobile à Nantes">AppVentus</a></h2>
@@ -38,6 +38,8 @@
 
                     <p>You can also use the less file available at <code>less/style.less</code>. With this file you can overide easily customize the <a href="#less-variables">Less variables listed below</a> in order to define colors, sizes and more.</p>
 
+                    <p>In order to avoid the animation behave on load, don't forget to include the <code>jquery.preload.js</code> script (located at <code>/js</code>), and add and <code>.preload</code> class to you body</p>
+
                     <hr>
 
                     <h2 class="h4">Bower usage</h2>
@@ -49,17 +51,6 @@
 
                     <h2 class="h4" id="less-variables">Less Variables</h2>
                     <p>The variables are divided in two categories, the <code>modules</code> and the <code>themes</code>. The module variables change the structure and the behave of the component in your template. The theme just change the look without size or layout consequences. Those two kinds of variables are called <code>parameters</code> and you can find them in <code>/less/parameters</code></p>
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            <span class="label label-danger">T</span>
-                            <strong>@toggleSwitch_transitionDuration</strong>: 100ms
-                        </li>
-
-                        <li class="list-group-item">
-                            <span class="label label-danger">T</span>
-                            <strong>@toggleSwitch_transitionTiming</strong>: ease
-                        </li>
-                    </ul>
 
                     <ul class="list-group">
                         <li class="list-group-item">
@@ -101,12 +92,27 @@
                             <span class="label label-danger">T</span>
                             <strong>@toggleSwitch_opacity-_disabled</strong>: 0.25
                         </li>
+
+                        <li class="list-group-item">
+                            <span class="label label-danger">T</span>
+                            <strong>@toggleSwitch-container_transitionDuration</strong>: 100ms
+                        </li>
+
+                        <li class="list-group-item">
+                            <span class="label label-danger">T</span>
+                            <strong>@toggleSwitch-container_transitionAnimation</strong>: ease
+                        </li>
                     </ul>
 
                     <ul class="list-group">
                         <li class="list-group-item">
                             <span class="label label-primary">M</span>
                             <strong>@toggleSwitch-button_margin</strong>: 2px
+                        </li>
+
+                        <li class="list-group-item">
+                            <span class="label label-primary">M</span>
+                            <strong>@toggleSwitch-button_widthDiff-_transition</strong>: 10px
                         </li>
 
                         <li class="list-group-item">
@@ -117,6 +123,11 @@
                         <li class="list-group-item">
                             <span class="label label-danger">T</span>
                             <strong>@toggleSwitch-button_boxShadow</strong>: 0 2px 5px 0 fade(#333, 25%)
+                        </li>
+
+                        <li class="list-group-item">
+                            <span class="label label-danger">T</span>
+                            <strong>@toggleSwitch-button_animationDuration</strong>: 500ms
                         </li>
                     </ul>
 
@@ -209,9 +220,6 @@
 
                     <p class="small text-right">with love from Nantes</p>
                 </div>
-
-
-
             </div>
         </div>
     </body>
