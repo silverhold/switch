@@ -1,11 +1,11 @@
 {
-  "name": "toggleSwitch",
+  "name": "trowel-switch",
   "main": "index.html",
-  "homepage": "https://github.com/LoicGoyet/toggleSwitch",
+  "homepage": "https://github.com/Trowel/switch",
   "authors": [
-    "Loic Goyet <loic.goyet@gmail.com> (https://twitter.com/earvinpepper)",
+    "Loic Goyet <loic.goyet@gmail.com> (https://twitter.com/loicgoyet)",
     "Clement Menant <c.menant@ymail.com> (https://www.behance.net/clementmenant)"
   ],
-  "description": "This is some css that allow you to style (in CSS3 and HTML5) the input type=checkbox elements as a toggle switch",
+  "description": "A trowel component to display a switch",
   "license": "MIT"
 }
