@@ -1,11 +1,11 @@
 {
-  "name": "trowel-switch",
+  "name": "silverhold-switch",
   "main": "index.html",
-  "homepage": "https://github.com/Trowel/switch",
+  "homepage": "https://github.com/silverhold/switch",
   "authors": [
     "Loic Goyet <loic.goyet@gmail.com> (https://twitter.com/loicgoyet)",
     "Clement Menant <c.menant@ymail.com> (https://www.behance.net/clementmenant)"
   ],
-  "description": "A trowel component to display a switch",
+  "description": "A silverhold component to display a switch",
   "license": "MIT"
 }
